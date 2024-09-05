@@ -1,0 +1,10 @@
+npx sequelize-cli db:create // this will createa connection between user and db
+
+npx sequelize-cli db:create
+
+npx sequelize-cli model:generate --name user --attributes userType:ENUM,firstname:string,lastname:string,email:string,password:string
+
+npx sequelize-cli db:migrate // create a table 
+npx sequelize-cli db:migrate:undo // delete  a table or undo changes  || avoid in productinon
+
+npx sequelize-cli seed:generate --name admin-user  // create a seeder file 
